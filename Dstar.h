@@ -11,7 +11,7 @@
 #include <queue>
 #include <list>
 #include <stdio.h>
-#include <ext/hash_map>
+#include <unordered_map>
 
 using namespace std;
 using namespace __gnu_cxx;
@@ -72,8 +72,8 @@ class state_hash {
 
 
 typedef priority_queue<state, vector<state>, greater<state> > ds_pq;
-typedef hash_map<state,cellInfo, state_hash, equal_to<state> > ds_ch;
-typedef hash_map<state, float, state_hash, equal_to<state> > ds_oh;
+typedef unordered_map<state,cellInfo, state_hash, equal_to<state> > ds_ch;
+typedef unordered_map<state, float, state_hash, equal_to<state> > ds_oh;
 
 
 class Dstar {
